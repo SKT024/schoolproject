@@ -1,0 +1,108 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 0 20px 40px;
+}
+
+#my-text {
+    font-size: 20px;
+    text-align: center;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(rgba(250,238,205,0), #e4eff2);
+  pointer-events: none;
+}
+
+.hero-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 100px;
+  line-height: 1.0;
+  text-align: center;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  margin: 0;
+  width: 90%;
+}
+
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-only {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.fade-only.visible {
+  opacity: 1;
+}
+
+.strokeme
+{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #0b0a21,
+    1px -1px 0 #0b0a21,
+    -1px 1px 0 #0b0a21,
+    1px 1px 0 #0b0a21;  
+}
